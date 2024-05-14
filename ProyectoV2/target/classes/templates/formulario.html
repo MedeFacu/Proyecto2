@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Llene los siguientes campos cuidadosamente</h1>
+    <div id="presupuesto-form">
+        <label for="donacion">Donación:</label>
+        <input type="number" field="*{donacion}" name="donacion">
+        
+        <label for="ingreso">Ingreso extra:</label>
+        <input type="number" field="*{ingreso}" name="ingreso">
+        
+        <label for="gasto">Gasto:</label>
+        <input type="number" field="*{gasto}" name="gasto">
+        
+        <label for="total">Total:</label>
+        <input type="number" field="*{total}" name="total" id="total" readonly>
+        <br><br>
+        
+         <button type="button" onclick="enviarPresupuesto()">Enviar</button>
+        <a th:href="@{/}"><button id="salir">Salir</button></a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registros de Presupuestos</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Donación</th>
+                <th>Ingreso</th>
+                <th>Gasto</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="presupuesto : ${presupuestos}">
+                <td th:text="${presupuesto.id}"></td>
+                <td th:text="${presupuesto.donacion}"></td>
+                <td th:text="${presupuesto.ingreso}"></td>
+                <td th:text="${presupuesto.gasto}"></td>
+                <td th:text="${presupuesto.total}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
